@@ -7,50 +7,49 @@ namespace _1_2_aufgabe
         static string[] subjects = { "Harry", "Hermine", "Ron", "Hagrid", "Snape", "Dumbledore" };
         static string[] verbs = { "braut", "liebt", "studiert", "hasst", "zaubert", "zerstört" };
         static string[] objects = { "Zaubertränke", "den Grimm", "Lupin", "Hogwards", "die Karte des Rumtreibers", "Dementoren" };
-        
+
+        static int subLength = subjects.Length;
+        static string Sub;
+        static string Verb;
+        static string Obj;
         static void Main(string[] args)
         {
-            int num;
-            int[] array = new int[5];
-            int[] count = new int[5];
-            for (int i = 0; i < count.Length; i++)
+            string[] verse = new string[subLength];
+            for (int i = 0; i < subjects.Length; i++)
             {
-                num = GetVerse();
-                count[i] = num;
-
-                // num = GetVerse();
-                // // count[i] = num;
-                // int numTwo = GetVerse();
-                // array[i] = numTwo;
-                // // Console.Write(num + " | ");
-                // if( num == array[i]){
-                //     count[i] = num;
-                //     Console.WriteLine( num + " == " + count[i] + " -- " + array[i] );
-                // }else{
-                //     Console.WriteLine( num + " != " + count[i] + " -- " + array[i] );
-                //     num = GetVerse();
-                //     // array[i] = num;
-                // }
-
-                // if (count[i] == num){
-                //     num = GetVerse();
-                //     // count[i] = num;
-                // }else{
-                //     count[i] = num;
-                //     // num = GetVerse();
-                // }
-                
-                // Console.WriteLine( i + " Random number is " + num + " " + subjects[num]);
-                // Console.WriteLine( "Zähler :" + count[i]);
+                GetVerse();
+                verse[i] = Sub + " " + Verb + " " + Obj;
             }
-            // Console.WriteLine("Random number is " + num);
+            for (int i = 0; i < subjects.Length; i++){
+                Console.WriteLine(verse[i]);
+            }
         }
 
-        public static int GetVerse(){
+        public static void GetVerse()
+        {
             Random rnd = new Random();
-            int num = rnd.Next(1, 5);
-            // Console.WriteLine(num);
-            return num;
+            int num = rnd.Next(0, subLength);
+
+            while (subjects[num] == "used")
+            {
+                num = rnd.Next(0, subLength);
+            }
+            Sub = subjects[num];
+            subjects[num] = "used";
+
+            while (verbs[num] == "used")
+            {
+                num = rnd.Next(0, subLength);
+            }
+            Verb = verbs[num];
+            verbs[num] = "used";
+
+            while (objects[num] == "used")
+            {
+                num = rnd.Next(0, subLength);
+            }
+            Obj = objects[num];
+            objects[num] = "used";
         }
     }
 }
