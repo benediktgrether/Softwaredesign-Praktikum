@@ -12,6 +12,7 @@ namespace _1_2_aufgabe
         static string Sub;
         static string Verb;
         static string Obj;
+        
         static void Main(string[] args)
         {
             string[] verse = new string[subLength];
