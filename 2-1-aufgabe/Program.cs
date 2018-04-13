@@ -1,12 +1,25 @@
 ﻿using System;
+using static System.Console;
 
-namespace _2_1_aufgabe
+public class SimplePerson
+{
+   public string FirstName;
+   public string LastName;
+   public DateTime DateOfBirth;
+   public DateTime NowYear;
+}
+
+namespace Debugging
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Person root = Familytree.BuildTree();
+
+            Person found = Familytree.Find(root);
+
+            WriteLine(found);
         }
     }
 }

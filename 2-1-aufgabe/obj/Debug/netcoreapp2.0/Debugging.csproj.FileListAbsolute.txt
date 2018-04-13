@@ -1,0 +1,10 @@
+/Users/benediktgrether/Desktop/L03_Debugging/bin/Debug/netcoreapp2.0/Debugging.deps.json
+/Users/benediktgrether/Desktop/L03_Debugging/bin/Debug/netcoreapp2.0/Debugging.runtimeconfig.json
+/Users/benediktgrether/Desktop/L03_Debugging/bin/Debug/netcoreapp2.0/Debugging.runtimeconfig.dev.json
+/Users/benediktgrether/Desktop/L03_Debugging/bin/Debug/netcoreapp2.0/Debugging.dll
+/Users/benediktgrether/Desktop/L03_Debugging/bin/Debug/netcoreapp2.0/Debugging.pdb
+/Users/benediktgrether/Desktop/L03_Debugging/obj/Debug/netcoreapp2.0/Debugging.csproj.CoreCompileInputs.cache
+/Users/benediktgrether/Desktop/L03_Debugging/obj/Debug/netcoreapp2.0/Debugging.AssemblyInfoInputs.cache
+/Users/benediktgrether/Desktop/L03_Debugging/obj/Debug/netcoreapp2.0/Debugging.AssemblyInfo.cs
+/Users/benediktgrether/Desktop/L03_Debugging/obj/Debug/netcoreapp2.0/Debugging.dll
+/Users/benediktgrether/Desktop/L03_Debugging/obj/Debug/netcoreapp2.0/Debugging.pdb

@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/2-1-aufgabe/2-1-aufgabe.csproj",
-      "projectName": "2-1-aufgabe",
-      "projectPath": "/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/2-1-aufgabe/2-1-aufgabe.csproj",
+      "projectUniqueName": "/Users/benediktgrether/Desktop/L03_Debugging/Debugging.csproj",
+      "projectName": "Debugging",
+      "projectPath": "/Users/benediktgrether/Desktop/L03_Debugging/Debugging.csproj",
       "packagesPath": "/Users/benediktgrether/.nuget/packages/",
-      "outputPath": "/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/2-1-aufgabe/obj/",
+      "outputPath": "/Users/benediktgrether/Desktop/L03_Debugging/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
