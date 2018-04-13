@@ -57,30 +57,6 @@ namespace Debugging
             ret = Find(person.Dad);
             return ret;
         }
-        public static Person FindPerson(Person person)
-        {
-            Person ret = null;
-            // Exception Throw
-            // if (person.LastName != "Cambridge" && person.LastName !=  "Spencer" && person.LastName !=  "Roche" && person.LastName !=  "Gill")
-            //     return person;
-
-            // Find not first Person 
-            // if(person.LastName == "Roche")
-            // if(person.LastName != "Cambridge")
-            // return person;
-            
-            int age = DateTime.Now.Year - person.DateOfBirth.Year;
-            if(80 < age && age < 200)
-                return person;
-
-            ret = Find(person.Mom);
-            if (ret != null)
-                return ret;
-            ret = Find(person.Dad);
-            return ret;
-        }
-
-
         public static Person BuildTree()
         {
             return  

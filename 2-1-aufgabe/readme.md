@@ -117,6 +117,9 @@ mit DateTime.Now.Year. Analysiert mit dem Debugger, ob Eure Bedingung richtig is
 >```
 >
 > Wenn man nun diese if Abfrage im Code hinzufügt, kann man nun nach einer Gewissen Alterspanne Filtern.
+>
+> [Family Tree](https://github.com/benediktgrether/Softwaredesign-Praktikum/blob/master/2-1-aufgabe/FamilyTree.cs)
+
 
 
 
