@@ -17,53 +17,55 @@ startet den Debugger und seht Euch den Inhalt von `root` im Debugger an.
 
 > ## Antwort:
 >
-> Jüngste Person im Stammbaum ist Willi Cambridge.
+> Build Tree root erzeugt einen Stammbaum der bei der Jüngsten Person anfängt. Dies ist Willi Cambridge.
+> Geht man nun weiter durch das root Verzeichnis, wird immer mehr des Stammbaums angezeigt und aufgedeckt.
+> In den kommenden Tabellen ist nun der Stammbaum von Willi Cambridge Mütterlicher und Väterlicherseite aufgelistet 
 >
 > Die Eltern von Willi Cambridge sind 
 >
 > |     Mom       |     Dad       |
 > | ------------- |:-------------:|
 > | Diana Spancer     | Charlie Wales |
-
-
+>
+>
 > Die Eltern von Diana Spancer:
 >
 > |     Mom       |     Dad       |
 > | ------------- |:-------------:|
 > | Franzi Roche  | Edie Spencer  |
-
+>
 > Die Eltern von Franzi Roche:
 >
 > |     Mom       |     Dad       |
 > | ------------- |:-------------:|
 > | Ruth Gill     | Moritz Roche  |
-
+>
 > Die Eltern von Edie Spencer:
 >
 > |     Mom       |     Dad       |
 > | ------------- |:-------------:|
 > | Cynthia Hamilton  | Albert Spencer  |
-
+>
 > Die Eltern von Charlie Wales:
 >
 > |     Mom       |     Dad       |
 > | ------------- |:-------------:|
 > | Else Windsor  | Philipp Battenberg  |
-
+>
 > Die Eltern von Philip Battenberg:
 >
 > |     Mom       |     Dad       |
 > | ------------- |:-------------:|
 > | Alice Battenberg | Andi ElGreco  |
-
+>
 > Die Eltern von Else Windsor :
 >
 > |     Mom       |     Dad       |
 > | ------------- |:-------------:|
 > | Lisbeth Bowes-Lyon | Schorsch-Albert York  |
+>
+> Der Stammbaum hört bei Null auf das keine weiter Personen mehr gefunden wurden.
 
-> Der Stammbaum hört bei Null auf.
-> Bei der Abfrage der einzelnen Personen, wird immer weiter in den Stammbaum durchwandert, bis die letzte Person ausgegeben wurde
 
 
 Die Methode `Find()` durchläuft rekursiv den Baum und prüft alle `Person`-Objekte darauf, ob die Bedingung in 
@@ -84,7 +86,7 @@ Analysiert die Abstürze mit dem Debugger, überprüft Variableninhalte und den 
 > `if (person.LastName == "Battenberg")`
 >
 > wirft die if-Bedienung eine `'System.NullReferenceException'`, da der Stammbaum Rekursive durchwandert wird um zu überprüfen ob die Person `"Battenberg"` vorhanden ist.
-> Dies ist nicht der Fall da die Person Battenberg in dem Mütterlichen Stammbaum nicht vorhanden ist, und das führt dann dabei zu einer NullReferenceException
+> Dabei wird aber nur die Mütterliche Seite untersucht und in diesem Stammbaum ist keine Person mit dem Nachnamen Battenberg vorhanden. Das führt nun zu einer NullReferenceException
 >
 > Wenn man nun in den Code diese if Abfrage hinzufügt, wird verhindert das es zu einer `'System.NullReferenceException'` kommt.
 > ```C#
@@ -119,7 +121,6 @@ mit DateTime.Now.Year. Analysiert mit dem Debugger, ob Eure Bedingung richtig is
 > Wenn man nun diese if Abfrage im Code hinzufügt, kann man nun nach einer Gewissen Alterspanne Filtern.
 >
 > [Family Tree](https://github.com/benediktgrether/Softwaredesign-Praktikum/blob/master/2-1-aufgabe/FamilyTree.cs)
-
 
 
 
