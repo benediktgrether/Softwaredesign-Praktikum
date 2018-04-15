@@ -118,7 +118,9 @@ mit DateTime.Now.Year. Analysiert mit dem Debugger, ob Eure Bedingung richtig is
 >           return ret;
 >```
 >
-> Wenn man nun diese if Abfrage im Code hinzufügt, kann man nun nach einer Gewissen Alterspanne Filtern.
+> Wenn man nun DateTime.Now.Year - person.DateOfBirth.Year, in den Code hinzufügt kann man nun über eine neue If Abfrage 
+> `if(50 < age && age < 100)` nach einer bestimmten Alterspanne den Stammbaum durchforschen und wenn ein
+> Entsprechender Wert gefunden wurde, wird dieser zurück geliefert.
 >
 > [Family Tree](https://github.com/benediktgrether/Softwaredesign-Praktikum/blob/master/2-1-aufgabe/FamilyTree.cs)
 
