@@ -6,35 +6,54 @@ namespace _3_1_aufgabe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(toHexal(Convert.ToInt32(args[0])));
-            // int value = Convert.ToInt32(args[0]);
-            
-            // if (0 <= value && value <= 1023 ){
-                // toHexal(value);
-            // }else{
-            //     Console.WriteLine("Please make a input from 0 to 1023");
-            // }
+            // Console.WriteLine(ConvertDecimalToHexal(Convert.ToInt32(args[0])));
+            Console.WriteLine(ConvertHexalToDezimal(Convert.ToInt32(args[0])));
         }
-        public static int toHexal(int value)
+        public static int ConvertDecimalToHexal(int dec)
         {
-
-            int newvalue ;
+            //To Do - if input from 0 to 1023
+            int value ;
             int rest;
-            int[] arr = new int[value.ToString().Length + 1];
+            int[] arr = new int[4];
             
-            for (int i = 0; i <= value.ToString().Length + 1; i++)
+            for (int i = 0; i <= dec.ToString().Length + 2; i++)
             {
-                newvalue = value / 6;
-                rest = value % 6;
+                value = dec / 6;
+                rest = dec % 6;
                 arr[i] = rest;
-                Console.WriteLine(newvalue + " mod " + rest );
-                Console.WriteLine("array test " + arr[i]);
-                value = newvalue;
+                dec = value;
             } 
             Array.Reverse(arr);
-            // return arrayrest;
-            Console.WriteLine("Debugger " + string.Join("", arr));
-            return value;
+            int newArr = Convert.ToInt32((string.Join("", arr)));
+            return newArr;
+        }
+
+        public static int ConvertHexalToDezimal(int hexal)
+        {
+            /* 
+                Berechnung im 10 dezimal 
+                4*6^3 + 4*6^2 + 2*6^1 + 3*6^0 = 1023
+            */
+
+            int a = Math.Abs(hexal);
+            int length = a.ToString().Length;
+            int[] array = new int[length];
+
+            // new array
+            int [] arr = new int[length];
+            int sum = 0;
+
+            for (int i = 0; i < length; i++)
+            {
+                array[i] = a % 10;
+                a /= 10;
+                arr[i] += array[i] * Convert.ToInt32(Math.Pow(6, i));
+            }
+            for (int j = 0; j < arr.Length; j++)
+            {
+                sum += arr[j];
+            }
+            return sum;
         }
     }
 }
