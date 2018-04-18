@@ -6,7 +6,6 @@ namespace _3_1_aufgabe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             int value = Convert.ToInt32(args[0]);
             
             if (0 <= value && value <= 1023 ){
@@ -17,6 +16,13 @@ namespace _3_1_aufgabe
         }
         public static int toHexal(int value)
         {
+
+            Console.WriteLine(value + " Der Rest beträgt : " +value % 6);
+            for (int i = value.ToString().Length; i > 0; i--)
+            {
+                Console.WriteLine(i);
+            }
+           
             /* 
             Umwandlung von 6 --> Dez
             Die Basis ist hier 6. 
