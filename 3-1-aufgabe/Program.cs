@@ -9,9 +9,11 @@ namespace _3_1_aufgabe
             Console.WriteLine("Hello World!");
             int value = Convert.ToInt32(args[0]);
             
-            // ToDo - If Bediengung erstellen das den Wert zwischen 0 und 1023 überprüft   
-            
-            toHexal(value);
+            if (0 <= value && value <= 1023 ){
+                toHexal(value);
+            }else{
+                Console.WriteLine("Please make a input from 0 to 1023");
+            }
             }
         public static int toHexal(int value)
         {
