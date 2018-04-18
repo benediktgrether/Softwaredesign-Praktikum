@@ -17,7 +17,7 @@ namespace _3_1_aufgabe
         public static int toHexal(int value)
         {
 
-            Console.WriteLine(value + " Der Rest beträgt : " +value % 6);
+            Console.WriteLine(value + " Der Rest beträgt : " + value % 6);
             for (int i = value.ToString().Length; i > 0; i--)
             {
                 Console.WriteLine(i);
