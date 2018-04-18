@@ -14,7 +14,7 @@ namespace _3_1_aufgabe
             }else{
                 Console.WriteLine("Please make a input from 0 to 1023");
             }
-            }
+        }
         public static int toHexal(int value)
         {
             /* 
