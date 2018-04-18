@@ -9,7 +9,8 @@ namespace _3_1_aufgabe
             // Console.WriteLine(ConvertDecimalToHexal(Convert.ToInt32(args[0])));
             // Console.WriteLine(ConvertHexalToDezimal(Convert.ToInt32(args[0])));
             // Console.WriteLine(ConvertToBaseFromDecimal(Convert.ToInt32(args[0]), Convert.ToInt32(args[1])));
-            Console.WriteLine(ConvertToDecimalFromBase(Convert.ToInt32(args[0]), Convert.ToInt32(args[1])));
+            // Console.WriteLine(ConvertToDecimalFromBase(Convert.ToInt32(args[0]), Convert.ToInt32(args[1])));
+            Console.WriteLine(ConvertNumberToBaseFromBase(Convert.ToInt32(args[0]), Convert.ToInt32(args[1]), Convert.ToInt32(args[2])));
         }
         public static int ConvertDecimalToHexal(int dec)
         {
@@ -96,6 +97,43 @@ namespace _3_1_aufgabe
                 sum += arr[j];
             }
             return sum;
+        }
+
+        public static int ConvertNumberToBaseFromBase(int number, int toBase, int fromBase)
+        {
+            int a = Math.Abs(number);
+            int length = a.ToString().Length;
+            int[] array = new int[length];
+
+            // new array
+            int [] arr = new int[length];
+            int sum = 0;
+
+            for (int i = 0; i < length; i++)
+            {
+                array[i] = a % 10;
+                a /= 10;
+                arr[i] += array[i] * Convert.ToInt32(Math.Pow(fromBase, i));
+            }
+            for (int j = 0; j < arr.Length; j++)
+            {
+                sum += arr[j];
+            }
+            
+            int newValue = sum / toBase;
+            int modulo;
+            int[] arr2 = new int[4];
+            for (int i = 0; i <= sum.ToString().Length + 2; i++)
+            {
+                newValue = sum / toBase;
+                modulo = sum % toBase;
+                arr2[i] = modulo;
+                sum = newValue;
+            } 
+            Array.Reverse(arr2);
+            int newArr2 = Convert.ToInt32((string.Join("", arr2)));
+
+            return newArr2;
         }
 
     }
