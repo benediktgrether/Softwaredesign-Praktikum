@@ -14,43 +14,12 @@ namespace _3_1_aufgabe
         }
         public static int ConvertDecimalToHexal(int dec)
         {
-            int value ;
-            int modulo;
-            int[] arr = new int[4];
-            
-            if (0 <= dec && dec <= 1023){
-                for (int i = 0; i <= dec.ToString().Length + 2; i++)
-                {
-                    value = dec / 6;
-                    modulo = dec % 6;
-                    arr[i] = modulo;
-                    dec = value;
-                } 
-            }
-            Array.Reverse(arr);
-            int sum = Convert.ToInt32((string.Join("", arr)));
-            return sum;
+            return  ConvertToBaseFromDecimal(6, dec);
         }
 
         public static int ConvertHexalToDezimal(int hexal)
         {
-
-            int length = hexal.ToString().Length;
-            int[] array = new int[length];
-            int [] arr = new int[length];
-            int sum = 0;
-
-            for (int i = 0; i < length; i++)
-            {
-                array[i] = hexal % 10;
-                hexal /= 10;
-                arr[i] += array[i] * Convert.ToInt32(Math.Pow(6, i));
-            }
-            for (int j = 0; j < arr.Length; j++)
-            {
-                sum += arr[j];
-            }
-            return sum;
+            return ConvertToDecimalFromBase(6, hexal);
         }
 
         public static int ConvertToBaseFromDecimal(int toBase, int dec)
@@ -58,14 +27,16 @@ namespace _3_1_aufgabe
             int value;
             int modulo;
             int[] arr = new int[4];
-            
-            for (int i = 0; i <= dec.ToString().Length + 2; i++)
-            {
-                value = dec / toBase;
-                modulo = dec % toBase;
-                arr[i] = modulo;
-                dec = value;
-            } 
+            if (0 <= dec && dec <= 1023)
+            {        
+                for (int i = 0; i <= dec.ToString().Length + 2; i++)
+                {
+                    value = dec / toBase;
+                    modulo = dec % toBase;
+                    arr[i] = modulo;
+                    dec = value;
+                } 
+            }
             Array.Reverse(arr);
             int sum = Convert.ToInt32((string.Join("", arr)));
             return sum;
