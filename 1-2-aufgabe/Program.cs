@@ -29,30 +29,30 @@ namespace _1_2_aufgabe
         public static void GetVerse()
         {
             Random random = new Random();
-            int subNum = random.Next(0, subLength);
-            int verbNum = random.Next(0, subLength);
-            int objNum = random.Next(0, subLength);
+            int randomsubject = random.Next(0, subLength);
+            int randomverb = random.Next(0, subLength);
+            int randomobject = random.Next(0, subLength);
 
-            while (subjects[subNum] == "used")
+            while (subjects[randomsubject] == "used")
             {
-                subNum = random.Next(0, subLength);
+                randomsubject = random.Next(0, subLength);
             }
-            Sub = subjects[subNum];
-            subjects[subNum] = "used";
+            Sub = subjects[randomsubject];
+            subjects[randomsubject] = "used";
 
-            while (verbs[verbNum] == "used")
+            while (verbs[randomverb] == "used")
             {
-                verbNum = random.Next(0, subLength);
+                randomverb = random.Next(0, subLength);
             }
-            Verb = verbs[verbNum];
-            verbs[verbNum] = "used";
+            Verb = verbs[randomverb];
+            verbs[randomverb] = "used";
 
-            while (objects[objNum] == "used")
+            while (objects[randomobject] == "used")
             {
-                objNum = random.Next(0, subLength);
+                randomobject = random.Next(0, subLength);
             }
-            Obj = objects[objNum];
-            objects[objNum] = "used";
+            Obj = objects[randomobject];
+            objects[randomobject] = "used";
         }
     }
 }
