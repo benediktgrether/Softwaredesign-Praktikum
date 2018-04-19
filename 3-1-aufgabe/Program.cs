@@ -3,7 +3,7 @@
 namespace _3_1_aufgabe
 {
     class Program
-    {   
+    {
         static void Main(string[] args)
         {
             Console.WriteLine("Convert from Decimal to Hexal: " + ConvertDecimalToHexal(Convert.ToInt32(args[0])));
@@ -14,7 +14,7 @@ namespace _3_1_aufgabe
         }
         public static int ConvertDecimalToHexal(int dec)
         {
-            return  ConvertToBaseFromDecimal(6, dec);
+            return ConvertToBaseFromDecimal(6, dec);
         }
 
         public static int ConvertHexalToDezimal(int hexal)
@@ -28,14 +28,14 @@ namespace _3_1_aufgabe
             int modulo;
             int[] arr = new int[4];
             if (0 <= dec && dec <= 1023)
-            {        
+            {
                 for (int i = 0; i <= dec.ToString().Length + 2; i++)
                 {
                     value = dec / toBase;
                     modulo = dec % toBase;
                     arr[i] = modulo;
                     dec = value;
-                } 
+                }
             }
             Array.Reverse(arr);
             int sum = Convert.ToInt32((string.Join("", arr)));
@@ -45,7 +45,7 @@ namespace _3_1_aufgabe
         {
             int length = number.ToString().Length;
             int[] array = new int[length];
-            int [] arr = new int[length];
+            int[] arr = new int[length];
             int sum = 0;
 
             for (int i = 0; i < length; i++)
@@ -63,13 +63,13 @@ namespace _3_1_aufgabe
         public static int ConvertNumberToBaseFromBase(int number, int toBase, int fromBase)
         {
 
-            if(2 <= fromBase && fromBase <= 10 && 2 <= toBase && toBase <= 10){   
+            if (2 <= fromBase && fromBase <= 10 && 2 <= toBase && toBase <= 10)
+            {
                 int dec = ConvertToDecimalFromBase(fromBase, number);
                 int value = ConvertToBaseFromDecimal(toBase, dec);
                 return value;
             }
             return -1;
         }
-
     }
 }
