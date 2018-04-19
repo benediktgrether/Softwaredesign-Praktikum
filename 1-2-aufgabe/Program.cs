@@ -4,11 +4,11 @@ namespace _1_2_aufgabe
 {
     class Program
     {
-        static string[] Subjects = { "Harry", "Hermine", "Ron", "Hagrid", "Snape", "Dumbledore" };
-        static string[] Verbs = { "braut", "liebt", "studiert", "hasst", "zaubert", "zerstört" };
-        static string[] Objects = { "Zaubertränke", "den Grimm", "Lupin", "Hogwards", "die Karte des Rumtreibers", "Dementoren" };
+        static string[] subjects = { "Harry", "Hermine", "Ron", "Hagrid", "Snape", "Dumbledore" };
+        static string[] verbs = { "braut", "liebt", "studiert", "hasst", "zaubert", "zerstört" };
+        static string[] objects = { "Zaubertränke", "den Grimm", "Lupin", "Hogwards", "die Karte des Rumtreibers", "Dementoren" };
 
-        static int subLength = Subjects.Length;
+        static int subLength = subjects.Length;
         static string Sub;
         static string Verb;
         static string Obj;
@@ -16,43 +16,43 @@ namespace _1_2_aufgabe
         static void Main(string[] args)
         {
             string[] verse = new string[subLength];
-            for (int i = 0; i < Subjects.Length; i++)
+            for (int i = 0; i < subjects.Length; i++)
             {
                 GetVerse();
                 verse[i] = Sub + " " + Verb + " " + Obj;
             }
-            for (int i = 0; i < Subjects.Length; i++){
+            for (int i = 0; i < subjects.Length; i++){
                 Console.WriteLine(verse[i]);
             }
         }
 
         public static void GetVerse()
         {
-            Random rnd = new Random();
-            int subNum = rnd.Next(0, subLength);
-            int verbNum = rnd.Next(0, subLength);
-            int objNum = rnd.Next(0, subLength);
+            Random random = new Random();
+            int subNum = random.Next(0, subLength);
+            int verbNum = random.Next(0, subLength);
+            int objNum = random.Next(0, subLength);
 
-            while (Subjects[subNum] == "used")
+            while (subjects[subNum] == "used")
             {
-                subNum = rnd.Next(0, subLength);
+                subNum = random.Next(0, subLength);
             }
-            Sub = Subjects[subNum];
-            Subjects[subNum] = "used";
+            Sub = subjects[subNum];
+            subjects[subNum] = "used";
 
-            while (Verbs[verbNum] == "used")
+            while (verbs[verbNum] == "used")
             {
-                verbNum = rnd.Next(0, subLength);
+                verbNum = random.Next(0, subLength);
             }
-            Verb = Verbs[verbNum];
-            Verbs[verbNum] = "used";
+            Verb = verbs[verbNum];
+            verbs[verbNum] = "used";
 
-            while (Objects[objNum] == "used")
+            while (objects[objNum] == "used")
             {
-                objNum = rnd.Next(0, subLength);
+                objNum = random.Next(0, subLength);
             }
-            Obj = Objects[objNum];
-            Objects[objNum] = "used";
+            Obj = objects[objNum];
+            objects[objNum] = "used";
         }
     }
 }
