@@ -13,7 +13,7 @@ namespace _3_1_aufgabe
             Console.WriteLine($"Convert number {value} from 10 - base to 6 - base = " + ConvertDecimalToHexal(value) );
             Console.WriteLine($"Convert number {value} from 6 - base to 10 - base = " + ConvertHexalToDezimal(value) );
             Console.WriteLine($"Convert number {value} from 10 - base to {toBase} - base = " + ConvertToBaseFromDecimal(value, toBase) );
-            Console.WriteLine($"Convert number {value} from {fromBase} - base  to decimal -base = " + ConvertToDecimalFromBase(value ,fromBase) );
+            Console.WriteLine($"Convert number {value} from {fromBase} - base  to decimal - base = " + ConvertToDecimalFromBase(value ,fromBase) );
             Console.WriteLine($"Convert number {value} from {fromBase} - base to {toBase} - base = " + ConvertNumberToBaseFromBase(value, toBase, fromBase) );
         }
         public static int ConvertDecimalToHexal(int dec)
