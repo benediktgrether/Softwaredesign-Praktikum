@@ -6,11 +6,15 @@ namespace _3_1_aufgabe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Convert from Decimal to Hexal: " + ConvertDecimalToHexal(Convert.ToInt32(args[0])));
-            Console.WriteLine("Convert from Hexal to Dezimal: " + ConvertHexalToDezimal(Convert.ToInt32(args[0])));
-            Console.WriteLine("Convert to Base from Decimal: " + ConvertToBaseFromDecimal(Convert.ToInt32(args[0]), Convert.ToInt32(args[1])));
-            Console.WriteLine("Convert to Decimal from Base: " + ConvertToDecimalFromBase(Convert.ToInt32(args[0]), Convert.ToInt32(args[1])));
-            Console.WriteLine("Convert Number to Base from Base: " + ConvertNumberToBaseFromBase(Convert.ToInt32(args[0]), Convert.ToInt32(args[1]), Convert.ToInt32(args[2])));
+            int value = Convert.ToInt32(args[0]);
+            int toBase = Convert.ToInt32(args[1]);
+            int fromBase = Convert.ToInt32(args[2]);
+            
+            Console.WriteLine($"Convert {value} from decimal - base to hexal - base = " + ConvertDecimalToHexal(value) );
+            Console.WriteLine($"Convert {value} from hexal - base to decimal - base = " + ConvertHexalToDezimal(value) );
+            Console.WriteLine($"Convert {value} from decimal - base to {toBase} - base = " + ConvertToBaseFromDecimal(value, toBase) );
+            Console.WriteLine($"Convert {value} from {fromBase} - base  to decimal -base = " + ConvertToDecimalFromBase(value ,fromBase) );
+            Console.WriteLine($"Convert {value} from {fromBase} - base to {toBase} - base = " + ConvertNumberToBaseFromBase(value, toBase, fromBase) );
         }
         public static int ConvertDecimalToHexal(int dec)
         {
