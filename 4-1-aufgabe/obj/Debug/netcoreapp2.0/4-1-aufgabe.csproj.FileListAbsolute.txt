@@ -1,0 +1,10 @@
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/4-1-aufgabe/obj/Debug/netcoreapp2.0/4-1-aufgabe.csproj.CoreCompileInputs.cache
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/4-1-aufgabe/obj/Debug/netcoreapp2.0/4-1-aufgabe.AssemblyInfoInputs.cache
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/4-1-aufgabe/obj/Debug/netcoreapp2.0/4-1-aufgabe.AssemblyInfo.cs
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/4-1-aufgabe/bin/Debug/netcoreapp2.0/4-1-aufgabe.deps.json
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/4-1-aufgabe/bin/Debug/netcoreapp2.0/4-1-aufgabe.runtimeconfig.json
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/4-1-aufgabe/bin/Debug/netcoreapp2.0/4-1-aufgabe.runtimeconfig.dev.json
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/4-1-aufgabe/bin/Debug/netcoreapp2.0/4-1-aufgabe.dll
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/4-1-aufgabe/bin/Debug/netcoreapp2.0/4-1-aufgabe.pdb
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/4-1-aufgabe/obj/Debug/netcoreapp2.0/4-1-aufgabe.dll
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/4-1-aufgabe/obj/Debug/netcoreapp2.0/4-1-aufgabe.pdb
