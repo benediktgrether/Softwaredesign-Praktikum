@@ -54,6 +54,10 @@ namespace _4_1_aufgabe
             child1.AppendChild(grand11);
             child1.AppendChild(grand12);
             child1.AppendChild(grand13);
+            var grand111 = tree.CreateNode("grand111");
+            var grand112 = tree.CreateNode("grand112");
+            grand11.AppendChild(grand111);
+            grand11.AppendChild(grand112);
             var grand21 = tree.CreateNode("grand21");
             child2.AppendChild(grand21);
             child1.RemoveChild(grand12);
