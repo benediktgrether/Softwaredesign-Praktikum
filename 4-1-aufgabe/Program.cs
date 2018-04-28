@@ -5,18 +5,6 @@ using System.Linq;
 namespace _4_1_aufgabe
 {
 
-    // public class Tree<TreeType>
-    // {
-    //     public TreeNode<TreeType> CreateNode(TreeType data)
-    //     {
-    //         TreeNode<TreeType> newNode = new TreeNode<TreeType>
-    //         {
-    //             Data = data
-    //         };
-    //         return newNode;
-    //     }
-    // }
-
     public class TreeNode<T>
     {
         public T Data;
@@ -73,5 +61,4 @@ namespace _4_1_aufgabe
             root.PrintTree();
         }
     }
-
 }
