@@ -5,58 +5,48 @@ using System.Linq;
 namespace _4_1_aufgabe
 {
 
+    // public class Tree<TreeType>
+    // {
+    //     public TreeNode<TreeType> CreateNode(TreeType data)
+    //     {
+    //         TreeNode<TreeType> newNode = new TreeNode<TreeType>
+    //         {
+    //             Data = data
+    //         };
+    //         return newNode;
+    //     }
+    // }
+
     public class TreeNode<T>
     {
-        public TreeNode<T> [] _childNodes;
-        private TreeNode<T>  _parentsNode;
-        private T _nodeContent;
-        public int _count = 0;
+        public T Data;
+        public List<TreeNode<T>> Children = new List<TreeNode<T>>();
 
-        // public TreeNode()
-        // {
-        //     _parentsNode = new T[_parentsNode.Length];
-        //     _count = 0;
-        // }
-
-        public TreeNode<T> CreateNode(T treeNodes)
+        public TreeNode<T> CreateNode(T data)
         {
-            TreeNode<T> node = new TreeNode<T>();
-            node._nodeContent = treeNodes;
-            return node;
+            TreeNode<T> newNode = new TreeNode<T>
+            {
+                Data = data
+            };
+            return newNode;
         }
 
-        public void AppendChild(TreeNode<T> node)
+        public void AppendChild(TreeNode<T> child)
         {
-            if(_count == 0)
-            {
-                _childNodes = new TreeNode<T>[] { node };
-            } 
-            else 
-            {
-                TreeNode<T>[] array = _childNodes;
-                _childNodes = new TreeNode<T>[_count + 1 ];
-                Array.Copy(array, _childNodes, _count);
-                _childNodes[_count] = node;
-            }
-            _count++;
-            node._parentsNode = this;
+            Children.Add(child);
         }
-        public void removeChild()
+        public void RemoveChild(TreeNode<T> child)
         {
-            
+            Children.Remove(child);
         }
 
         public void PrintTree(String AddTree = "")
         {
-            Console.WriteLine(AddTree +_nodeContent.ToString());
-            if(_count > 0)
+            Console.WriteLine(AddTree + Data);
+            foreach (TreeNode<T> child in Children)
             {
-                foreach (var node in _childNodes)
-                {
-                    node.PrintTree(AddTree + "|_");
-                }
+                child.PrintTree(AddTree + "*");
             }
-
         }
     }
 
@@ -78,9 +68,9 @@ namespace _4_1_aufgabe
             child1.AppendChild(grand13);
             var grand21 = tree.CreateNode("grand21");
             child2.AppendChild(grand21);
-            // child1.RemoveChild(grand12);
+            child1.RemoveChild(grand12);
 
-            root.PrintTree(); 
+            root.PrintTree();
         }
     }
 
