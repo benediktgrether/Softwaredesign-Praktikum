@@ -28,7 +28,7 @@ namespace _4_1_aufgabe
             child2.AppendChild(grand21);
             child1.RemoveChild(grand12);
             
-            //child1.FindChild(grand11);
+            child1.FindChild(grand11);
 
             root.PrintTree();
         }

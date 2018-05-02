@@ -26,11 +26,14 @@ namespace _4_1_aufgabe
             Children.Remove(child);
         }
 
-        // public void FindChild(TreeNode<T> child)
-        // {
-        //     Children.Find(x => x.Children.Contains(child));
-        //     //Console.WriteLine();
-        // }
+        public void FindChild(TreeNode<T> findChild)
+        {
+            foreach (TreeNode<T> child in Children)
+            {
+                TreeNode<T> result = Children.Find(x => x.Children.Contains(findChild));
+                Console.WriteLine(result);
+            }
+        }
 
         public void PrintTree(String AddTree = "")
         {
