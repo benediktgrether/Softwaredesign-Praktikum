@@ -11,7 +11,7 @@ namespace _4_1_aufgabe
             var tree = new TreeNode<String>();
             var root = tree.CreateNode("root");
             var child1 = tree.CreateNode("child1");
-            var child2 = tree.CreateNode("child1");
+            var child2 = tree.CreateNode("child2");
             root.AppendChild(child1);
             root.AppendChild(child2);
             var grand11 = tree.CreateNode("grand11");
@@ -28,7 +28,12 @@ namespace _4_1_aufgabe
             child2.AppendChild(grand21);
             child1.RemoveChild(grand12);
             
-            child1.FindChild(grand11);
+            // grand11.FindChild(grand11);
+            // child1.FindChild(grand11);
+            // var test = tree.CreateNode(grand11);
+            // root.FindChild("child1");
+            var test = tree.FindChild("grand12");
+
 
             root.PrintTree();
         }
