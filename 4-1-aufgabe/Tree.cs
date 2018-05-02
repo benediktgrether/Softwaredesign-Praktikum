@@ -24,9 +24,6 @@ namespace _4_1_aufgabe
             // return (Nodes.Where(x => x.Contains(search)));
             return (Nodes.FindAll(x => x.Data.Equals(search)));
         }
-
-
-
         
         public void AppendChild(TreeNode<T> child)
         {
