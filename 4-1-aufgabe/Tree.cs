@@ -8,7 +8,6 @@ namespace _4_1_aufgabe
     {
         public T Data;
         public List<TreeNode<T>> Children = new List<TreeNode<T>>();
-        // public List<TreeNode<T>> Nodes = new List<TreeNode<T>>();
 
         public TreeNode<T> CreateNode(T data)
         {
@@ -16,13 +15,8 @@ namespace _4_1_aufgabe
             {
                 Data = data
             };
-            // Nodes.Add(newNode);
             return newNode;
         }
-        // public List<TreeNode<T>> FindChild(T search)
-        // {
-        //     return (Nodes.FindAll(x => x.Data.Equals(search)));
-        // }
 
         public void AppendChild(TreeNode<T> child)
         {
@@ -58,6 +52,11 @@ namespace _4_1_aufgabe
                 child.FindChild(search, Nodes);
             }
             return Nodes;
+        }
+        
+        public override string ToString()
+        {
+            return Data.ToString();
         }
     }
 }
