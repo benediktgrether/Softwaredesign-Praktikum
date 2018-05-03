@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _4_1_aufgabe
 {
@@ -7,7 +8,7 @@ namespace _4_1_aufgabe
     {
         public T Data;
         public List<TreeNode<T>> Children = new List<TreeNode<T>>();
-        public List<TreeNode<T>> Nodes = new List<TreeNode<T>>();
+        // public List<TreeNode<T>> Nodes = new List<TreeNode<T>>();
 
         public TreeNode<T> CreateNode(T data)
         {
@@ -15,13 +16,13 @@ namespace _4_1_aufgabe
             {
                 Data = data
             };
-            Nodes.Add(newNode);
+            // Nodes.Add(newNode);
             return newNode;
         }
-        public List<TreeNode<T>> FindChild(T search)
-        {
-            return (Nodes.FindAll(x => x.Data.Equals(search)));
-        }
+        // public List<TreeNode<T>> FindChild(T search)
+        // {
+        //     return (Nodes.FindAll(x => x.Data.Equals(search)));
+        // }
 
         public void AppendChild(TreeNode<T> child)
         {
@@ -40,6 +41,23 @@ namespace _4_1_aufgabe
             {
                 child.PrintTree(AddTree + "*");
             }
+        }
+
+        public List<TreeNode<T>> FindChild(T search, List<TreeNode<T>> Nodes = null)
+        {
+            if (Nodes == null)
+            {
+                Nodes = new List<TreeNode<T>>();
+            }
+            if (Data.Equals(search))
+            {
+                Nodes.Add(this);
+            }
+            foreach (TreeNode<T> child in Children)
+            {
+                child.FindChild(search, Nodes);
+            }
+            return Nodes;
         }
     }
 }

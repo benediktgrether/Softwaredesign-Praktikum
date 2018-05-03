@@ -32,10 +32,16 @@ namespace _4_1_aufgabe
             // child1.FindChild(grand11);
             // var test = tree.CreateNode(grand11);
             // root.FindChild("child1");
-            var test = (tree.FindChild("child1"));
+            // var test = tree.FindChild("child2");
+            // child1.FindChild(grand11);
 
+            root.PrintTree();            
 
-            root.PrintTree();
+            foreach (var element in root.FindChild("grand111"))
+            {
+                Console.WriteLine(element);
+            }
+
         }
     }
 }
