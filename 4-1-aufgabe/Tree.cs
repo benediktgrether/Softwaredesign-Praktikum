@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace _4_1_aufgabe
 {
@@ -21,10 +20,9 @@ namespace _4_1_aufgabe
         }
         public List<TreeNode<T>> FindChild(T search)
         {
-            // return (Nodes.Where(x => x.Contains(search)));
-            return Nodes.FindAll(x => x.Data.Equals(search));
+            return (Nodes.FindAll(x => x.Data.Equals(search)));
         }
-        
+
         public void AppendChild(TreeNode<T> child)
         {
             Children.Add(child);
