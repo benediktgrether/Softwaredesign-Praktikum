@@ -27,13 +27,6 @@ namespace _4_1_aufgabe
             var grand21 = tree.CreateNode("grand21");
             child2.AppendChild(grand21);
             child1.RemoveChild(grand12);
-            
-            // grand11.FindChild(grand11);
-            // child1.FindChild(grand11);
-            // var test = tree.CreateNode(grand11);
-            // root.FindChild("child1");
-            // var test = tree.FindChild("child2");
-            // child1.FindChild(grand11);
 
             root.PrintTree();            
 
