@@ -4,7 +4,7 @@ namespace uml_aufgabe
 {
 
 
-    public interface Iinformation
+    public interface IstudyCourse
     {
         void SampleMethod();
     }
