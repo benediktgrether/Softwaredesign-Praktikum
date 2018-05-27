@@ -2,40 +2,33 @@
 
 namespace uml_aufgabe
 {
-
-
-    public interface IstudyCourse
+    interface Person
     {
-        void SampleMethod();
+        string FirstName();
+        string LastName();
+        int Age();
     }
 
-    class Person
+    interface Member : Person
     {
-        public string FirstName;
-        public string LastName;
-        public int Age;
+        int MatriculationNumber();
+        string[] courses();
     }
 
-    class Member : Person
+    interface Professor : Person 
     {
-        public int MatriculationNumber;
-        public string[] courses;
+        string Room();
+        DateTime OfficeDays();
+        DateTime OfficeHours();
+        string[] courses();
     }
 
-    class Professor : Person 
+    interface Course : Professor, Member
     {
-        public string Room;
-        public Datetime OfficeDays;
-        public Datetime OfficeHours;
-        public string[] courses;
-    }
-
-    class Course : Professor, Member
-    {
-        public string Titel;
-        public Datetime day;
-        public Datetime time;
-        public string CoursRoom;
+        string Titel();
+        DateTime day();
+        DateTime time();
+        string CoursRoom();
     }
 
     class Program
