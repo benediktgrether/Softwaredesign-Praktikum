@@ -47,8 +47,6 @@ namespace uml_aufgabe
                 }
                 return TotalParticipant;
             }
-
-
         }
 
         class Course 
@@ -66,6 +64,7 @@ namespace uml_aufgabe
             }
         }
     }
+    
     class Program
     {
         static void Main(string[] args)
