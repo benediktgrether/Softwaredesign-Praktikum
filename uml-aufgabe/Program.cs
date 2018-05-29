@@ -35,7 +35,7 @@ namespace uml_aufgabe
             List<Participant> TotalParticipant = new List<Participant>();
             
             foreach (Course course in Course)
-                foreach(Participant participant in course.Participant)
+                foreach(Participant participant in course.TotalParticipant)
                     if(!TotalParticipant.Contains(participant))
                         TotalParticipant.Add(participant);
 
