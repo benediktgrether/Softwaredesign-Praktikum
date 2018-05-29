@@ -5,9 +5,9 @@
 ![alt text](./img/uml.png "UML Diagramm")
 
 
-> Implementiert das Klassendiagramm in C#
+<!-- > Implementiert das Klassendiagramm in C#
 >
-> Es gibt mehrere Möglichkeiten, die kennt Beziehungen zu implementieren. Welche sind geeignet?
+> Es gibt mehrere Möglichkeiten, die kennt Beziehungen zu implementieren. Welche sind geeignet? -->
 
 <!-- **ANTWORT**
 
