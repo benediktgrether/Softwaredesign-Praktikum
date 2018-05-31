@@ -47,6 +47,14 @@ namespace L07_DesignPatterns
             return _instance;
         }
 
+        // private IDGenerator Instance
+        // {
+        //     get
+        //     {
+        //         return this._instance;
+        //     }
+        // }
+
         private int letzteID;
         public int GibMirNeId()
         {

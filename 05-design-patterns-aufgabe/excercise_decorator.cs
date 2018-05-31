@@ -7,7 +7,7 @@ namespace L07_DesignPatterns
   {
     public virtual void Threaten()
     {
-      Console.WriteLine("Raawwwwrrrrr");
+      Console.WriteLine("Raawwwwrrrrr ");
     }
   }
   class Monster : GameChar
