@@ -13,7 +13,7 @@ namespace L07_DesignPatterns
         {
             this.Name = name;
             this.Age = age;
-            this.Id  = IDGenerator.GetInstance().GibMirNeId();
+            this.Id  = IDGenerator.Instance.GibMirNeId();
             Program.personen.Add(this);
         }
 
@@ -40,20 +40,22 @@ namespace L07_DesignPatterns
 
         private static IDGenerator _instance;
 
-        public static IDGenerator GetInstance()
-        {
-            if (_instance == null)
-                _instance = new IDGenerator();
-            return _instance;
-        }
-
-        // private IDGenerator Instance
+        // public static IDGenerator GetInstance()
         // {
-        //     get
-        //     {
-        //         return this._instance;
-        //     }
+        //     if (_instance == null)
+        //         _instance = new IDGenerator();
+        //     return _instance;
         // }
+
+        public static IDGenerator Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new IDGenerator();
+                return _instance;
+            }
+        }
 
         private int letzteID;
         public int GibMirNeId()

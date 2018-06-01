@@ -35,6 +35,7 @@ namespace L07_DesignPatterns
     public override void Threaten()
     {
       _original.Threaten();
+      base.Threaten();
       Console.Write("Hust!");
     }
   }
@@ -50,6 +51,7 @@ namespace L07_DesignPatterns
     public override void Threaten()
     {
       _original.Threaten();
+      base.Threaten();
       Console.Write("Räusper....");
     }
   }

@@ -18,3 +18,4 @@
 /Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/05-design-patterns-aufgabe/obj/Debug/netcoreapp2.0/L07_DesignPatterns.AssemblyInfo.cs
 /Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/05-design-patterns-aufgabe/obj/Debug/netcoreapp2.0/L07_DesignPatterns.dll
 /Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/05-design-patterns-aufgabe/obj/Debug/netcoreapp2.0/L07_DesignPatterns.pdb
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/05-design-patterns-aufgabe/obj/Debug/netcoreapp2.0/L07_DesignPatterns.csprojResolveAssemblyReference.cache
