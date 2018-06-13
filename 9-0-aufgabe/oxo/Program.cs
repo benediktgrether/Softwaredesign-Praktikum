@@ -6,7 +6,7 @@ namespace oxo
     {
         static void Main(string[] args)
         {
-            GameValue.Game();
+            Game.Turn();
         }
 
     }
