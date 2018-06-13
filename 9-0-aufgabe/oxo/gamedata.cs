@@ -59,9 +59,11 @@ namespace oxo
             {
                 ValueInvalid();
             } 
-            Turn();
+            // Turn();
+            checkWin();
         }
 
+        #region Error Message Value 
         private static void ValueInUse()
         {
             Console.WriteLine("--------");
@@ -80,6 +82,12 @@ namespace oxo
             Console.WriteLine(" + Value invalid. Please insert a new value + ");
             Console.ResetColor();
             Console.WriteLine("--------");
+        }
+        #endregion
+    
+        public static void checkWin()
+        {
+            
         }
     }
 
