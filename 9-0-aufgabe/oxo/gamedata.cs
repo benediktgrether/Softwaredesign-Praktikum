@@ -13,52 +13,50 @@ namespace oxo
         {
             for(;;)
             {
+                Field();
                 if((counter %2) == 0)
                 {
                     Console.WriteLine("--------");
-                    Console.WriteLine("Player 1 - X");
+                    Console.WriteLine("Player X");
                     Console.WriteLine("--------");
                     player = turn[0];
                 }
                 else
                 {
                     Console.WriteLine("--------");
-                    Console.WriteLine("Player 2 - O");
+                    Console.WriteLine("Player O");
                     Console.WriteLine("--------");
                     player = turn[1];
                 }
-                DrawBoard();
-                
-                if(Draw())
-                {
-                    Console.WriteLine("Draw");
-                    FinishBoard();
-                    break;
-                }
-                
+
+                addInput();
+
                 if(checkWin())
                 {
-                    Console.WriteLine("Player " + turn[counter % 2] + " Win");
-                    FinishBoard();
+                    WinnerColor();
                     break;
                 }
-                counter ++;
+
+                if(Draw())
+                {
+                    DrawColor();
+                    break;
+                }
             }
         }
 
-        public static void DrawBoard()
+        public static void Field()
         {
             Console.WriteLine("|#####|");
             Console.WriteLine("|" + gameData[0] + "|" + gameData[1] + "|" + gameData[2] + "|");
             Console.WriteLine("|" + gameData[3] + "|" + gameData[4] + "|" + gameData[5] + "|");
             Console.WriteLine("|" + gameData[6] + "|" + gameData[7] + "|" + gameData[8] + "|");
             Console.WriteLine("|#####|");
-            addInput();
         }
 
         public static void addInput()
         {
-            Console.WriteLine("Input eingeben");
+            Console.WriteLine("Please insert your Turn");
             
             int input = 0; 
             try
@@ -75,6 +73,7 @@ namespace oxo
                 if(gameData[input -1] != turn[0] && gameData[input -1] != turn[1])
                 {
                     gameData[input -1 ] = player;
+                    counter ++;
                 }
                 else
                 {
@@ -87,28 +86,6 @@ namespace oxo
             } 
             checkWin();
         }
-
-        #region Error Message Value 
-        private static void ValueInUse()
-        {
-            Console.WriteLine("--------");
-            Console.BackgroundColor = ConsoleColor.Red;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(" + Value in use. Please insert a new value + ");
-            Console.ResetColor();
-            Console.WriteLine("--------");
-        }
-
-        private static void InvalidValue()
-        {
-            Console.WriteLine("--------");
-            Console.BackgroundColor = ConsoleColor.Red;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(" + Invalid value. Please insert a new value + ");
-            Console.ResetColor();
-            Console.WriteLine("--------");
-        }
-        #endregion
     
         public static bool checkWin()
         {
@@ -137,15 +114,48 @@ namespace oxo
             }
         }
 
-        #region Game Finish Board
-
-        private static void FinishBoard()
+        #region Error Message Value 
+        private static void ValueInUse()
         {
-            Console.WriteLine("|#####|");
-            Console.WriteLine("|" + gameData[0] + "|" + gameData[1] + "|" + gameData[2] + "|");
-            Console.WriteLine("|" + gameData[3] + "|" + gameData[4] + "|" + gameData[5] + "|");
-            Console.WriteLine("|" + gameData[6] + "|" + gameData[7] + "|" + gameData[8] + "|");
-            Console.WriteLine("|#####|");
+            Console.WriteLine("--------");
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" + Value in use. Please insert a new value + ");
+            Console.ResetColor();
+            Console.WriteLine("--------");
+        }
+
+        private static void InvalidValue()
+        {
+            Console.WriteLine("--------");
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" + Invalid value. Please insert a new value + ");
+            Console.ResetColor();
+            Console.WriteLine("--------");
+        }
+        #endregion
+
+        #region Winner
+        private static void WinnerColor()
+        {
+            counter ++;
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" Player " + turn[counter % 2] + " Win ");
+            Console.ResetColor();
+            Field();
+        }
+        #endregion
+
+        #region Draw
+        private static void DrawColor()
+        {
+            Console.BackgroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" Draw ");
+            Console.ResetColor();
+            Field();
         }
         #endregion
     }
