@@ -28,12 +28,14 @@ namespace oxo
                     player = turn[1];
                 }
                 DrawBoard();
+                
                 if(Draw())
                 {
                     Console.WriteLine("Draw");
                     FinishBoard();
                     break;
                 }
+                
                 if(checkWin())
                 {
                     Console.WriteLine("Player " + turn[counter % 2] + " Win");
