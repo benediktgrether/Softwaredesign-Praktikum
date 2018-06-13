@@ -83,7 +83,7 @@ namespace oxo
             }
             else
             {
-                ValueInvalid();
+                InvalidValue();
             } 
             checkWin();
         }
@@ -99,12 +99,12 @@ namespace oxo
             Console.WriteLine("--------");
         }
 
-        private static void ValueInvalid()
+        private static void InvalidValue()
         {
             Console.WriteLine("--------");
             Console.BackgroundColor = ConsoleColor.Red;
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(" + Value invalid. Please insert a new value + ");
+            Console.WriteLine(" + Invalid value. Please insert a new value + ");
             Console.ResetColor();
             Console.WriteLine("--------");
         }
