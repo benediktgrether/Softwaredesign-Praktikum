@@ -11,21 +11,36 @@ namespace oxo
 
         public static void Turn()
         {
-            if((counter %2) == 0)
+            for(;;)
             {
-                Console.WriteLine("--------");
-                Console.WriteLine("Player 1 - X");
-                Console.WriteLine("--------");
-                player = turn[0];
+                if((counter %2) == 0)
+                {
+                    Console.WriteLine("--------");
+                    Console.WriteLine("Player 1 - X");
+                    Console.WriteLine("--------");
+                    player = turn[0];
+                }
+                else
+                {
+                    Console.WriteLine("--------");
+                    Console.WriteLine("Player 2 - O");
+                    Console.WriteLine("--------");
+                    player = turn[1];
+                }
+                DrawBoard();
+                if(Draw())
+                {
+                    Console.WriteLine("Draw");
+                    FinishBoard();
+                    break;
+                }
+                if(checkWin())
+                {
+                    Console.WriteLine("Player Win");
+                    FinishBoard();
+                    break;
+                }
             }
-            else
-            {
-                Console.WriteLine("--------");
-                Console.WriteLine("Player 2 - O");
-                Console.WriteLine("--------");
-                player = turn[1];
-            }
-            DrawBoard();
         }
 
         public static void DrawBoard()
@@ -85,10 +100,44 @@ namespace oxo
         }
         #endregion
     
-        public static void checkWin()
+        public static bool checkWin()
         {
-            
+            // bool win = false;
+            if(gameData[0] == gameData[1] && gameData[0] == gameData[2]){return true;}
+            if(gameData[3] == gameData[4] && gameData[3] == gameData[5]){return true;}
+            if(gameData[6] == gameData[7] && gameData[6] == gameData[8]){return true;}
+
+            if(gameData[0] == gameData[3] && gameData[0] == gameData[6]){return true;}  
+            if(gameData[1] == gameData[4] && gameData[1] == gameData[7]){return true;}  
+            if(gameData[2] == gameData[5] && gameData[2] == gameData[8]){return true;}
+
+            if(gameData[0] == gameData[5] && gameData[0] == gameData[8]){return true;}  
+            if(gameData[2] == gameData[5] && gameData[2] == gameData[6]){return true;}
+            return false;  
         }
+
+        public static bool Draw()
+        {
+            if(counter == 9)
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
+        }
+
+        #region Game Finish Board
+
+        private static void FinishBoard()
+        {
+            Console.WriteLine("|#####|");
+            Console.WriteLine("|" + gameData[0] + "|" + gameData[1] + "|" + gameData[2] + "|");
+            Console.WriteLine("|" + gameData[3] + "|" + gameData[4] + "|" + gameData[5] + "|");
+            Console.WriteLine("|" + gameData[6] + "|" + gameData[7] + "|" + gameData[8] + "|");
+            Console.WriteLine("|#####|");
+        }
+        #endregion
     }
 
 }
