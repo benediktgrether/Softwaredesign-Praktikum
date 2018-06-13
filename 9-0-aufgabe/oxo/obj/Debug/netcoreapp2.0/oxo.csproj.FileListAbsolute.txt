@@ -1,0 +1,10 @@
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/9-0-aufgabe/oxo/obj/Debug/netcoreapp2.0/oxo.csproj.CoreCompileInputs.cache
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/9-0-aufgabe/oxo/obj/Debug/netcoreapp2.0/oxo.AssemblyInfoInputs.cache
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/9-0-aufgabe/oxo/obj/Debug/netcoreapp2.0/oxo.AssemblyInfo.cs
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/9-0-aufgabe/oxo/bin/Debug/netcoreapp2.0/oxo.deps.json
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/9-0-aufgabe/oxo/bin/Debug/netcoreapp2.0/oxo.runtimeconfig.json
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/9-0-aufgabe/oxo/bin/Debug/netcoreapp2.0/oxo.runtimeconfig.dev.json
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/9-0-aufgabe/oxo/bin/Debug/netcoreapp2.0/oxo.dll
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/9-0-aufgabe/oxo/bin/Debug/netcoreapp2.0/oxo.pdb
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/9-0-aufgabe/oxo/obj/Debug/netcoreapp2.0/oxo.dll
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/9-0-aufgabe/oxo/obj/Debug/netcoreapp2.0/oxo.pdb
