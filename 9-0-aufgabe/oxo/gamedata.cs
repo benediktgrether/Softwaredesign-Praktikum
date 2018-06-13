@@ -36,10 +36,11 @@ namespace oxo
                 }
                 if(checkWin())
                 {
-                    Console.WriteLine("Player Win");
+                    Console.WriteLine("Player " + turn[counter % 2] + " Win");
                     FinishBoard();
                     break;
                 }
+                counter ++;
             }
         }
 
@@ -56,14 +57,22 @@ namespace oxo
         public static void addInput()
         {
             Console.WriteLine("Input eingeben");
-            int input = Convert.ToInt32(Console.ReadLine());
+            
+            int input = 0; 
+            try
+            {
+                input = int.Parse(Console.ReadLine());
+            }
+            catch
+            {
+                
+            }
             
             if(0 < input && input < 10)
             {
                 if(gameData[input -1] != turn[0] && gameData[input -1] != turn[1])
                 {
                     gameData[input -1 ] = player;
-                    counter ++;
                 }
                 else
                 {
@@ -74,7 +83,6 @@ namespace oxo
             {
                 ValueInvalid();
             } 
-            // Turn();
             checkWin();
         }
 
@@ -111,14 +119,14 @@ namespace oxo
             if(gameData[1] == gameData[4] && gameData[1] == gameData[7]){return true;}  
             if(gameData[2] == gameData[5] && gameData[2] == gameData[8]){return true;}
 
-            if(gameData[0] == gameData[5] && gameData[0] == gameData[8]){return true;}  
-            if(gameData[2] == gameData[5] && gameData[2] == gameData[6]){return true;}
+            if(gameData[0] == gameData[4] && gameData[0] == gameData[8]){return true;}  
+            if(gameData[2] == gameData[4] && gameData[2] == gameData[6]){return true;}
             return false;  
         }
 
         public static bool Draw()
         {
-            if(counter == 9)
+            if(counter == 8)
             {
                 return true;
             }else
