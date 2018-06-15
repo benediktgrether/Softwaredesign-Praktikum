@@ -26,6 +26,20 @@ namespace oxo
             Console.WriteLine("|#####|");
         }
 
+        public static void Player()
+        {
+            Console.WriteLine("--------");
+            if((Game.counter % 2) == 0)
+            {
+                Console.WriteLine("Player X");
+            }
+            else
+            {
+                Console.WriteLine("Player O");
+            }
+            Console.WriteLine("--------");
+        }
+
         #region Error Message Value 
         public static void ValueInUse()
         {

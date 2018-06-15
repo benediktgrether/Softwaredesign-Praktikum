@@ -16,16 +16,12 @@ namespace oxo
                 ConsoleOutput.Field();
                 if((counter %2) == 0)
                 {
-                    Console.WriteLine("--------");
-                    Console.WriteLine("Player X");
-                    Console.WriteLine("--------");
+                    ConsoleOutput.Player();
                     player = turn[0];
                 }
                 else
                 {
-                    Console.WriteLine("--------");
-                    Console.WriteLine("Player O");
-                    Console.WriteLine("--------");
+                    ConsoleOutput.Player();
                     player = turn[1];
                 }
 
