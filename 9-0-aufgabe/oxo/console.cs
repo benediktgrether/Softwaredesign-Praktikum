@@ -7,10 +7,22 @@ namespace oxo
 
         public static void Field()
         {
+            int forcounter = 2;
             Console.WriteLine("|#####|");
-            Console.WriteLine("|" + Game.gameData[0] + "|" + Game.gameData[1] + "|" + Game.gameData[2] + "|");
-            Console.WriteLine("|" + Game.gameData[3] + "|" + Game.gameData[4] + "|" + Game.gameData[5] + "|");
-            Console.WriteLine("|" + Game.gameData[6] + "|" + Game.gameData[7] + "|" + Game.gameData[8] + "|");
+            
+            for(int i = 0; i < 9; i++)
+            {
+                if (i < forcounter)
+                {
+                    Console.Write("|");
+                    Console.Write(Game.gameData[i]);
+                }else{
+                    Console.Write("|");
+                    Console.WriteLine(Game.gameData[i] + "|");
+                    forcounter = forcounter + 3;
+                }
+            }
+            
             Console.WriteLine("|#####|");
         }
 
