@@ -4,6 +4,7 @@ namespace oxo
 {
     class Game
     {
+        // Kollege Müller schreibt gerne ein "_" vor Attribute
         public static char[] gameData = new char[]{'1','2','3','4','5','6','7','8','9'};
         public static int counter = 0;
         public static char[] turn = new char[]{'X', 'O'}; 
@@ -11,9 +12,9 @@ namespace oxo
 
         public static void Turn()
         {
-            for(;;)
+            for(;;) <- Alternativ while(true)
             {
-                ConsoleOutput.Field();
+                ConsoleOutput.Field(); <- besser PrintField()
                 if((counter %2) == 0)
                 {
                     ConsoleOutput.Player();
@@ -21,21 +22,22 @@ namespace oxo
                 }
                 else
                 {
-                    ConsoleOutput.Player();
+                    ConsoleOutput.Player(); <- Dopplung
                     player = turn[1];
                 }
+                turn[ (counter%2) ? 0: 1 ];
 
-                addInput();
+                addInput(); <- HandleInput();
 
-                if(checkWin())
+                if(checkWin())  <- CheckWin
                 {
-                    ConsoleOutput.WinnerColor();
+                    ConsoleOutput.WinnerColor(); <- PrintWinner()
                     break;
                 }
 
                 if(Draw())
                 {
-                    ConsoleOutput.DrawColor();
+                    ConsoleOutput.DrawColor(); <- ????
                     break;
                 }
             }
@@ -51,26 +53,26 @@ namespace oxo
             }
             catch
             {
-                
+                Ausgabe: gib Zahl zwischen 1 und 9 ein!
             }
             
             if(0 < input && input < 10)
             {
-                if(gameData[input -1] != turn[0] && gameData[input -1] != turn[1])
+                if(gameData[input -1] != turn[0] && gameData[input -1] != turn[1]) <- vielleicht kann man auch einfach prüfen, ob es noch eine Zahl ist?
                 {
                     gameData[input -1 ] = player;
                     counter ++;
                 }
                 else
                 {
-                    ConsoleOutput.ValueInUse();
+                    ConsoleOutput.ValueInUse(); <- der Wert wird gerade benutzt?
                 } 
             }
             else
             {
                 ConsoleOutput.InvalidValue();
             } 
-            checkWin();
+            checkWin(); <- warum hier ein zweiter Aufruf?
         }
     
         public static bool checkWin()
@@ -91,6 +93,7 @@ namespace oxo
 
         public static bool Draw()
         {
+            einfacher: return (counter > 8);
             if(counter == 9)
             {
                 return true;
