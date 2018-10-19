@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "swd-endaufgabe/1.0.0": {
+      "10-0-aufgabe/1.0.0": {
         "runtime": {
-          "swd-endaufgabe.dll": {}
+          "10-0-aufgabe.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "swd-endaufgabe/1.0.0": {
+    "10-0-aufgabe/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

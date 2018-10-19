@@ -1,0 +1,10 @@
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/10-0-aufgabe/obj/Debug/netcoreapp2.0/10-0-aufgabe.csproj.CoreCompileInputs.cache
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/10-0-aufgabe/obj/Debug/netcoreapp2.0/10-0-aufgabe.AssemblyInfoInputs.cache
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/10-0-aufgabe/obj/Debug/netcoreapp2.0/10-0-aufgabe.AssemblyInfo.cs
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/10-0-aufgabe/bin/Debug/netcoreapp2.0/10-0-aufgabe.deps.json
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/10-0-aufgabe/bin/Debug/netcoreapp2.0/10-0-aufgabe.runtimeconfig.json
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/10-0-aufgabe/bin/Debug/netcoreapp2.0/10-0-aufgabe.runtimeconfig.dev.json
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/10-0-aufgabe/bin/Debug/netcoreapp2.0/10-0-aufgabe.dll
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/10-0-aufgabe/bin/Debug/netcoreapp2.0/10-0-aufgabe.pdb
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/10-0-aufgabe/obj/Debug/netcoreapp2.0/10-0-aufgabe.dll
+/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/10-0-aufgabe/obj/Debug/netcoreapp2.0/10-0-aufgabe.pdb

@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/swd-endaufgabe/swd-endaufgabe.csproj",
-      "projectName": "swd-endaufgabe",
-      "projectPath": "/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/swd-endaufgabe/swd-endaufgabe.csproj",
+      "projectUniqueName": "/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/10-0-aufgabe/10-0-aufgabe.csproj",
+      "projectName": "10-0-aufgabe",
+      "projectPath": "/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/10-0-aufgabe/10-0-aufgabe.csproj",
       "packagesPath": "/Users/benediktgrether/.nuget/packages/",
-      "outputPath": "/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/swd-endaufgabe/obj/",
+      "outputPath": "/Users/benediktgrether/Documents/Hochschule/SoSe-18/Softwaredesign/praktikums-aufgabe/10-0-aufgabe/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
