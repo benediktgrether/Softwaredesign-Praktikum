@@ -29,7 +29,7 @@ namespace oxo
         public static void Player()
         {
             Console.WriteLine("--------");
-            if((Game.counter % 2) == 0)
+            if((Game.counter % 2) == 0)  <- player existiert doch schon, keine weitere Abfrage erforderlich
             {
                 Console.WriteLine("Player X");
             }
